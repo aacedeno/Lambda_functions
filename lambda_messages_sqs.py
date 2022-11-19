@@ -13,7 +13,7 @@ def lambda_handler(event, context):
     ##This method formats data into a string 
     current_time = date_time.strftime("%m/%d/%Y, %H:%M:%S") 
     
-    
+    #Lambda is sending message to a specfic queue
     sqs_message = sqs.send_message(
     QueueUrl='https://sqs.us-east-1.amazonaws.com/901305956784/Messages',
     MessageBody='current_time' 
